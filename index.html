@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tara Ctara — a responsive demo storefront for everyday style and essentials." />
+  <title>Tara Ctara | Everyday Finds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">A little something for your everyday ✦ Free shipping on orders over ₹999</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Tara Ctara home"><span class="brand-mark">T</span><span>Tara Ctara<small>EVERYDAY FINDS</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop all</a><a href="#shop" data-jump-category="Fashion">Fashion</a><a href="#shop" data-jump-category="Home">Home</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle" aria-label="Focus search">⌕</button>
+      <button class="cart-button" id="open-cart" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
+      <button class="menu-button" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE LITTLE THINGS, BEAUTIFULLY FOUND</p>
+        <h1>Good things.<br><em>Every day.</em></h1>
+        <p class="hero-text">Thoughtful picks for your wardrobe, your space, and all the moments in between.</p>
+        <a class="primary-button" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="note-star">✳</span><span>Curated with care<br><small>Made for your everyday</small></span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative fashion and lifestyle illustration">
+        <div class="sun-shape"></div>
+        <div class="art-card art-card-back"><span>FIND YOUR<br>OWN KIND<br>OF LOVELY.</span></div>
+        <div class="art-card art-card-front"><div class="art-flower">✿</div><span>little joys<br>live here</span></div>
+        <div class="floating-pill">NEW SEASON<br><b>EDIT</b></div>
+        <div class="art-squiggle">〰</div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Store benefits">
+      <div><span>✦</span> Thoughtfully selected</div><div><span>♡</span> Easy everyday style</div><div><span>↗</span> Simple, secure demo checkout</div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">A COLLECTION FOR YOU</p><h2>Find your next <em>favourite.</em></h2></div>
+        <p class="muted">A little browse can go a long way.</p>
+      </div>
+      <div class="shop-toolbar">
+        <div class="category-tabs" role="group" aria-label="Filter by category">
+          <button class="category-tab active" data-category="All">All finds</button>
+          <button class="category-tab" data-category="Fashion">Fashion</button>
+          <button class="category-tab" data-category="Accessories">Accessories</button>
+          <button class="category-tab" data-category="Home">Home</button>
+        </div>
+        <div class="shop-controls">
+          <label class="search-wrap"><span>⌕</span><input id="search-input" type="search" placeholder="Search products..." aria-label="Search products"></label>
+          <select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+        </div>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No finds match that search. Try another word.</p>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="story-art"><span class="story-sun">✳</span><span class="story-word">MAKE<br>ROOM FOR<br><em>JOY.</em></span></div>
+      <div class="story-copy"><p class="eyebrow">A NOTE FROM TARA CTARA</p><h2>Small joys.<br><em>Good choices.</em></h2><p>We believe the things around us should feel a little more personal. Tara Ctara is a concept storefront built around easy style, thoughtful details, and finding something lovely in the everyday.</p><a href="#shop" class="text-link">Meet your next favourite <span>→</span></a></div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">LET'S KEEP IN TOUCH</p><h2>A little note, now and then.</h2><p>New finds and fresh inspiration, straight to your inbox.</p></div>
+      <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required><button class="primary-button" type="submit">Sign me up ↗</button></form>
+      <p id="newsletter-message" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">T</span><span>Tara Ctara<small>EVERYDAY FINDS</small></span></a><p>Good things, found with care.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#about">Our story</a><a href="mailto:hello@example.com">Contact</a></div><small>© <span id="year"></span> Tara Ctara · Student portfolio demo project</small></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-modal="true" role="dialog" hidden>
+    <div class="drawer-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Close shopping bag">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div><p class="cart-note">Shipping and taxes calculated at checkout.</p><button class="primary-button checkout-button" id="checkout-button">Continue to checkout ↗</button><p class="demo-note">Demo only — no payment is collected.</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
